@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./styles/css/main.css" />
+    <title>Conversor Mágico</title>
+  </head>
+  <body>
+    <h1>Conversor Mágico</h1>
+    <div class="converterBox">
+      <div class="converterBox__littleBox">
+        <p>Dinero Muggle</p>
+        <input
+          class="converterBox--inputs"
+          type="number"
+          id="muggle"
+          value="0"
+        />
+        <div class='moneyTypesBox'>
+        <div class='moneyBox'>
+        <input class="moneyBox__moneyInputs" type="checkbox" id="euro">Euro</input>
+        </div>
+        <div class='moneyBox'>
+        <input class="moneyBox__moneyInputs" type="checkbox" id="libra">Libra</input>
+        </div>
+      </div>
+      </div>
+      <div class="converterBox__littleBox">
+        <p>Dinero Mágico</p>
+        <input
+          class="converterBox--inputs"
+          type="number"
+          id="magic"
+          value=""
+          disabled
+        />
+      </div>
+    </div>
+    <button class="button">Convertir</button>
+    <!-- JAVASCRIPT -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
