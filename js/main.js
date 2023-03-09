@@ -30,5 +30,16 @@ function fromMuggleToWizard() {
   document.getElementById("magic").value = moneyWithSymbol;
 }
 
-const button = document.getElementById("button");
-button.addEventListener("click", fromMuggleToWizard);
+function cleanerButton() {
+  // Clean inputs and checkboxes
+  document.getElementById("muggle").value = "0";
+  document.getElementById("magic").value = "";
+  document.getElementById("euro").checked = false;
+  document.getElementById("pound").checked = false;
+  document.getElementById("dollar").checked = false;
+}
+
+const converterButton = document.getElementById("converterButton");
+const clean = document.getElementById("clean");
+converterButton.addEventListener("click", fromMuggleToWizard);
+clean.addEventListener("click", cleanerButton);
