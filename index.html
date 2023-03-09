@@ -19,27 +19,48 @@
           id="muggle"
           value="0"
         />
-        <div class='moneyTypesBox'>
-        <div class='moneyBox'>
-        <input class="moneyBox__moneyInputs" type="checkbox" id="euro">Euro</input>
-        </div>
-        <div class='moneyBox'>
-        <input class="moneyBox__moneyInputs" type="checkbox" id="libra">Libra</input>
-        </div>
-      </div>
+        <form class="moneyTypesBox">
+          <div class="moneyBox">
+            <label for="euro">Euro</label>
+            <input
+              class="moneyBox__moneyInputs"
+              type="radio"
+              name="moneyType"
+              id="euro"
+            />
+          </div>
+          <div class="moneyBox">
+            <label for="pound">Libra</label>
+            <input
+              class="moneyBox__moneyInputs"
+              type="radio"
+              name="moneyType"
+              id="pound"
+            />
+          </div>
+          <div class="moneyBox">
+            <label for="dollar">Dólar</label>
+            <input
+              class="moneyBox__moneyInputs"
+              type="radio"
+              name="moneyType"
+              id="dollar"
+            />
+          </div>
+        </form>
       </div>
       <div class="converterBox__littleBox">
         <p>Dinero Mágico</p>
         <input
           class="converterBox--inputs"
-          type="number"
+          type="text"
           id="magic"
           value=""
           disabled
         />
       </div>
     </div>
-    <button class="button">Convertir</button>
+    <button class="button" id="button">Convertir</button>
     <!-- JAVASCRIPT -->
     <script src="./js/main.js"></script>
   </body>
