@@ -1,3 +1,5 @@
+/** GLOBAL **/
+
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +18,8 @@ body {
   height: 100vh;
 }
 
+/** MAIN BOXES **/
+
 .converterBox {
   display: flex;
   justify-content: center;
@@ -29,14 +33,15 @@ body {
   }
 
   &--inputs {
-    margin: 0.5rem 0.5rem 0;
+    margin: 0.5rem;
     padding: 0.3rem;
   }
 }
 
+/** FORM **/
+
 .moneyTypesBox {
   display: flex;
-  margin-top: 0.5rem;
   gap: 1rem;
 }
 
@@ -50,6 +55,8 @@ body {
   }
 }
 
+/** BUTTONS **/
+
 .button {
   padding: 0.5rem;
   border-radius: 10%;
@@ -60,4 +67,16 @@ body {
 .button:hover {
   background-color: lightgray;
   cursor: pointer;
+}
+
+/** MODAL **/
+
+.modalBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
 }

@@ -1,5 +1,13 @@
 "use strict";
 
+const converterButton = document.getElementById("converterButton");
+const clean = document.getElementById("clean");
+const openModal = document.getElementById("openModal");
+const closeModal = document.getElementById("closeModal");
+const modal = document.getElementById("modal");
+
+/** CONVERTER FUNCTION **/
+
 function fromMuggleToWizard() {
   const muggle = document.getElementById("muggle").value;
   const euro = document.getElementById("euro").checked;
@@ -30,6 +38,8 @@ function fromMuggleToWizard() {
   document.getElementById("magic").value = moneyWithSymbol;
 }
 
+/** CLEANER FUNCTION **/
+
 function cleanerButton() {
   // Clean inputs and checkboxes
   document.getElementById("muggle").value = "0";
@@ -39,7 +49,21 @@ function cleanerButton() {
   document.getElementById("dollar").checked = false;
 }
 
-const converterButton = document.getElementById("converterButton");
-const clean = document.getElementById("clean");
+/** MODAL FUNCTIONS **/
+
+function controlOpening() {
+  // Remove class to show additional content
+  modal.classList.remove("hidden");
+}
+
+function controlClosure() {
+  // Add class to hide additional content
+  modal.classList.add("hidden");
+}
+
+/** EVENTS **/
+
 converterButton.addEventListener("click", fromMuggleToWizard);
 clean.addEventListener("click", cleanerButton);
+openModal.addEventListener("click", controlOpening);
+closeModal.addEventListener("click", controlClosure);
